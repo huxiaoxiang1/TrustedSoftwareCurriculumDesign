@@ -15,8 +15,8 @@
 <org.eventb.core.invariant name="2" org.eventb.core.label="inv5" org.eventb.core.predicate=" repayDate − billDate &lt; dn "/>
 <org.eventb.core.variable name="7" org.eventb.core.comment="还款日" org.eventb.core.identifier="repayDate"/>
 <org.eventb.core.variable name="3" org.eventb.core.comment="信用卡状态" org.eventb.core.identifier="creditStatus"/>
-<org.eventb.core.variable name="4" org.eventb.core.comment="交易状态" org.eventb.core.identifier="tradeStatus"/>
+<org.eventb.core.variable name="4" org.eventb.core.comment="交易状态git测试" org.eventb.core.identifier="tradeStatus"/>
 <org.eventb.core.invariant name="5" org.eventb.core.label="inv6" org.eventb.core.predicate="creditStatus ⊆ cs"/>
 <org.eventb.core.invariant name="6" org.eventb.core.label="inv7" org.eventb.core.predicate="tradeStatus ⊆ ts"/>
-<org.eventb.core.invariant name="9" org.eventb.core.label="inv8" org.eventb.core.predicate="payLimit∈creditCard→0‥cl"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv8" org.eventb.core.predicate="payLimit∈creditCard→0‥cl" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>
