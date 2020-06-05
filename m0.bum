@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="信用卡管理" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.variable name="(" org.eventb.core.comment="用户" org.eventb.core.identifier="user"/>
+<org.eventb.core.variable name=")" org.eventb.core.comment="信用卡" org.eventb.core.identifier="creditCard"/>
+<org.eventb.core.variable name="*" org.eventb.core.comment="信用额度" org.eventb.core.identifier="creditLimit"/>
+<org.eventb.core.variable name="8" org.eventb.core.comment="支付额度" org.eventb.core.identifier="payLimit"/>
+<org.eventb.core.variable name="0" org.eventb.core.comment="余额" org.eventb.core.identifier="balance"/>
+<org.eventb.core.variable name="+" org.eventb.core.comment="账单日" org.eventb.core.identifier="billDate"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="user ⊆ u"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="creditCard ⊆ c" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="balance ∈ creditCard → 0‥bl"/>
+<org.eventb.core.seesContext name="/" org.eventb.core.target="c0"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv4" org.eventb.core.predicate="creditLimit ∈ creditCard → 0‥cl"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv5" org.eventb.core.predicate=" repayDate − billDate &lt; dn "/>
+<org.eventb.core.variable name="7" org.eventb.core.comment="还款日" org.eventb.core.identifier="repayDate"/>
+<org.eventb.core.variable name="3" org.eventb.core.comment="信用卡状态" org.eventb.core.identifier="creditStatus"/>
+<org.eventb.core.variable name="4" org.eventb.core.comment="交易状态" org.eventb.core.identifier="tradeStatus"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv6" org.eventb.core.predicate="creditStatus ⊆ cs"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="inv7" org.eventb.core.predicate="tradeStatus ⊆ ts"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv8" org.eventb.core.predicate="payLimit∈creditCard→0‥cl"/>
+</org.eventb.core.machineFile>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poIdentifier name="c" org.eventb.core.type="ℙ(c)"/>
+<org.eventb.core.poIdentifier name="cs" org.eventb.core.type="ℙ(cs)"/>
+<org.eventb.core.poIdentifier name="ts" org.eventb.core.type="ℙ(ts)"/>
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="ℙ(u)"/>
+<org.eventb.core.poIdentifier name="bl" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="cl" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="creditReductionRate" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="disable" org.eventb.core.type="cs"/>
+<org.eventb.core.poIdentifier name="dn" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="done" org.eventb.core.type="ts"/>
+<org.eventb.core.poIdentifier name="enable" org.eventb.core.type="cs"/>
+<org.eventb.core.poIdentifier name="lateFee" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="undone" org.eventb.core.type="ts"/>
+<org.eventb.core.poPredicate name="creditReductionRatf" org.eventb.core.predicate="disable∈cs" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="creditReductionRatg" org.eventb.core.predicate="enable∈cs" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="creditReductionRath" org.eventb.core.predicate="cs={disable,enable}" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="creditReductionRati" org.eventb.core.predicate="lateFee=1" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="creditReductionRatj" org.eventb.core.predicate="dn=30" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#3"/>
+<org.eventb.core.poPredicate name="creditReductionRatk" org.eventb.core.predicate="creditReductionRate=20" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="creditReductionRatl" org.eventb.core.predicate="done∈ts" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="creditReductionRatm" org.eventb.core.predicate="undone∈ts" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="creditReductionRatn" org.eventb.core.predicate="ts={done,undone}" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="creditReductionRato" org.eventb.core.predicate="cl&gt;0" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="creditReductionRatp" org.eventb.core.predicate="bl&gt;0" org.eventb.core.source="/transcation/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#?"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poIdentifier name="balance" org.eventb.core.type="ℙ(c×ℤ)"/>
+<org.eventb.core.poIdentifier name="billDate" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="creditCard" org.eventb.core.type="ℙ(c)"/>
+<org.eventb.core.poIdentifier name="creditLimit" org.eventb.core.type="ℙ(c×ℤ)"/>
+<org.eventb.core.poIdentifier name="creditStatus" org.eventb.core.type="ℙ(cs)"/>
+<org.eventb.core.poIdentifier name="payLimit" org.eventb.core.type="ℙ(c×ℤ)"/>
+<org.eventb.core.poIdentifier name="repayDate" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="tradeStatus" org.eventb.core.type="ℙ(ts)"/>
+<org.eventb.core.poIdentifier name="user" org.eventb.core.type="ℙ(u)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPcreditStatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="balance'∈creditCard' → 0 ‥ bl" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPcreditStatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="creditLimit'∈creditCard' → 0 ‥ cl" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPcreditStatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="repayDate' − billDate'&lt;dn" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTALLHYPcreditStatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="payLimit'∈creditCard' → 0 ‥ cl" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#9"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcreditStatut" org.eventb.core.parentSet="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poIdentifier name="creditStatus'" org.eventb.core.type="ℙ(cs)"/>
+<org.eventb.core.poIdentifier name="creditLimit'" org.eventb.core.type="ℙ(c×ℤ)"/>
+<org.eventb.core.poIdentifier name="creditCard'" org.eventb.core.type="ℙ(c)"/>
+<org.eventb.core.poIdentifier name="billDate'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="balance'" org.eventb.core.type="ℙ(c×ℤ)"/>
+<org.eventb.core.poIdentifier name="repayDate'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="payLimit'" org.eventb.core.type="ℙ(c×ℤ)"/>
+<org.eventb.core.poIdentifier name="user'" org.eventb.core.type="ℙ(u)"/>
+<org.eventb.core.poIdentifier name="tradeStatus'" org.eventb.core.type="ℙ(ts)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcreditStatut" org.eventb.core.parentSet="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#EVTIDENTcreditStatut" org.eventb.core.poStamp="23"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/transcation/m0.bpo|org.eventb.core.poFile#m0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user⊆u" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="creditCard⊆c" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="balance∈creditCard → 0 ‥ bl" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="creditLimit∈creditCard → 0 ‥ cl" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="repayDate − billDate&lt;dn" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="creditStatus⊆cs" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="tradeStatus⊆ts" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="payLimit∈creditCard → 0 ‥ cl" org.eventb.core.source="/transcation/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#9"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

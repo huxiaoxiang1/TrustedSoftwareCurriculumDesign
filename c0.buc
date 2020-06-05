@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.comment="信用卡" org.eventb.core.identifier="c"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.comment="用户" org.eventb.core.identifier="u"/>
+<org.eventb.core.constant name=")" org.eventb.core.comment="滞纳金" org.eventb.core.identifier="lateFee"/>
+<org.eventb.core.constant name="*" org.eventb.core.comment="还款天数" org.eventb.core.identifier="dn"/>
+<org.eventb.core.constant name="+" org.eventb.core.comment="信用额度降低率" org.eventb.core.identifier="creditReductionRate"/>
+<org.eventb.core.carrierSet name="," org.eventb.core.comment="信用卡状态" org.eventb.core.identifier="cs"/>
+<org.eventb.core.constant name="-" org.eventb.core.comment="信用卡状态:不可用" org.eventb.core.identifier="disable"/>
+<org.eventb.core.constant name="." org.eventb.core.comment="信用卡状态:可用" org.eventb.core.identifier="enable"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm1" org.eventb.core.predicate="disable∈cs"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm2" org.eventb.core.predicate="enable∈cs"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm3" org.eventb.core.predicate="cs={disable,enable}" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="axm4" org.eventb.core.predicate="lateFee=1"/>
+<org.eventb.core.axiom name="3" org.eventb.core.label="axm5" org.eventb.core.predicate="dn=30"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm6" org.eventb.core.predicate="creditReductionRate=20"/>
+<org.eventb.core.carrierSet name="5" org.eventb.core.comment="交易状态" org.eventb.core.identifier="ts"/>
+<org.eventb.core.constant name="6" org.eventb.core.comment="交易状态:完成" org.eventb.core.identifier="done"/>
+<org.eventb.core.constant name="7" org.eventb.core.comment="交易状态:未完成" org.eventb.core.identifier="undone"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="axm7" org.eventb.core.predicate="done∈ts" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="axm8" org.eventb.core.predicate="undone∈ts"/>
+<org.eventb.core.axiom name=":" org.eventb.core.label="axm9" org.eventb.core.predicate="ts={done,undone}"/>
+<org.eventb.core.constant name=";" org.eventb.core.comment="余额限制" org.eventb.core.identifier="bl"/>
+<org.eventb.core.axiom name="=" org.eventb.core.label="axm10" org.eventb.core.predicate="cl&gt;0" org.eventb.core.theorem="true"/>
+<org.eventb.core.constant name="&gt;" org.eventb.core.comment="信用限制" org.eventb.core.identifier="cl"/>
+<org.eventb.core.axiom name="?" org.eventb.core.label="axm11" org.eventb.core.predicate="bl&gt;0"/>
+</org.eventb.core.contextFile>
